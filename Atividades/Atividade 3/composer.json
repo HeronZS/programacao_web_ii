@@ -1,0 +1,8 @@
+{
+    "name": "heron/meu-projeto-pdf",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "mpdf/mpdf": "^6.1"
+    }
+}

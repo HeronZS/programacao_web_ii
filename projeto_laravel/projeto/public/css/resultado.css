@@ -1,0 +1,63 @@
+
+
+
+body {
+    background: rgba(1, 44, 85, 0.733);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgb(255, 255, 255);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.resultado {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.alerta {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.abaixo-peso { background: #FFD700; color: #333; }  /* Amarelo */
+.peso-normal { background: #28A745; color: white; } /* Verde */
+.sobrepeso { background: #FFC107; color: #333; }    /* Laranja Claro */
+.obesidade1 { background: #FF8C00; color: white; }  /* Laranja Forte */
+.obesidade2 { background: #DC3545; color: white; }  /* Vermelho */
+.obesidade3 { background: #8B0000; color: white; }  /* Vermelho Escuro */
+
+
+.botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #0056b3;
+}

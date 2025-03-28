@@ -6,19 +6,16 @@ use Illuminate\Http\Request;
 
 class IMCController extends Controller {
 
-    public function calcular(Request $request)   {
-        // Validação dos dados
+    public function calcular(Request $request) {
         $request->validate([
             'peso' => 'required|numeric|min:1',
             'altura' => 'required|numeric|min:0.5'
         ]);
-    
-        // Cálculo do IMC
+
         $peso = $request->input('peso');
         $altura = $request->input('altura');
         $imc = $peso / ($altura * $altura);
-    
-        // Classificação do IMC
+
         if ($imc < 18.5) {
             $classificacao = 'Abaixo do Peso';
         } elseif ($imc < 24.9) {
@@ -33,21 +30,20 @@ class IMCController extends Controller {
             $classificacao = 'Obesidade Grau III (Mórbida)';
         }
 
-        return redirect('/resultado')->with([
+        return redirect()->route('imc.resultado')->with([
             'peso' => $peso,
             'altura' => $altura,
             'imc' => number_format($imc, 2),
             'classificacao' => $classificacao
         ]);
-    }    
+    }
 
     public function resultado() {
-    return view('imc_result', [
-        'peso' => session('peso'),
-        'altura' => session('altura'),
-        'imc' => session('imc'),
-        'classificacao' => session('classificacao')
-    ]);
-}
-
+        return view('imc_result', [
+            'peso' => session('peso'),
+            'altura' => session('altura'),
+            'imc' => session('imc'),
+            'classificacao' => session('classificacao')
+        ]);
+    }
 }

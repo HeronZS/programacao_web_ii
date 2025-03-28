@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>Calcule seu IMC</h2>
-        <form action="/calcular" method="POST">
+        <form action="{{ route('imc.calcular') }}" method="POST">
             @csrf
             <label>Peso (kg):</label>
             <input type="number" step="0.1" name="peso" required><br>
@@ -18,8 +18,9 @@
             <input type="number" step="0.01" name="altura" required><br>
 
             <button type="submit">Calcular</button>
-    </form>
-
+        </form>
+        
+        <a href="{{ route('home') }}" class="botao-home">←</a>
     </div>
 </body>
 </html>

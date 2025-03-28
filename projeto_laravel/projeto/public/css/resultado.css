@@ -39,13 +39,17 @@ p {
     margin-top: 15px;
 }
 
-.abaixo-peso { background: #FFD700; color: #333; }  /* Amarelo */
-.peso-normal { background: #28A745; color: white; } /* Verde */
-.sobrepeso { background: #FFC107; color: #333; }    /* Laranja Claro */
-.obesidade1 { background: #FF8C00; color: white; }  /* Laranja Forte */
-.obesidade2 { background: #DC3545; color: white; }  /* Vermelho */
-.obesidade3 { background: #8B0000; color: white; }  /* Vermelho Escuro */
+.abaixo-peso { background: #FFD700; color: #333; }
+.peso-normal { background: #28A745; color: white; } 
+.sobrepeso { background: #FFC107; color: #333; }    
+.obesidade1 { background: #FF8C00; color: white; }  
+.obesidade2 { background: #DC3545; color: white; }
+.obesidade3 { background: #8B0000; color: white; }  
 
+.privacao { background-color: red; color: white;}
+.insuficiente { background-color: yellow; color: black;}
+.adequado { background-color: green; color: white;}
+.excessivo { background-color: purple; color: white;}
 
 .botao {
     display: inline-block;
@@ -61,3 +65,22 @@ p {
 .botao:hover {
     background-color: #0056b3;
 }
+
+.botao-home {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #d9534f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.botao-home:hover {
+    background: #c9302c;
+}
+

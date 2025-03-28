@@ -24,7 +24,7 @@
 
         <p class="alerta {{ $classeIMC }}"><strong>{{ $classificacao }}</strong></p>
         
-        <a href="/" class="botao">Calcular novamente</a>
+        <a href="{{ route('imc.form') }}" class="botao">Calcular novamente</a>
     </div>
 </body>
 </html>

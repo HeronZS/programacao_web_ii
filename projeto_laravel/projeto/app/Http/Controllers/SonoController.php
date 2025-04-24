@@ -10,7 +10,7 @@ class SonoController extends Controller {
             'horas_sono' => 'required|numeric|min:0'
         ]);
 
-        $horasSono = $request->input('horas_sono');  // Usar o nome correto
+        $horasSono = $request->input('horas_sono');  
         $classificacao = '';
         $classeSono = '';
 
@@ -28,7 +28,7 @@ class SonoController extends Controller {
             $classeSono = 'excessivo';
         }
 
-        // Redireciona com os dados
+        
         return redirect()->route('sono.resultado')->with([
             'horas_dormidas' => $horasSono,
             'classificacao' => $classificacao,
